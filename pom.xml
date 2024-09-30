@@ -13,6 +13,8 @@
         <module>Ejercicio2</module>
         <module>Ejercicio3</module>
         <module>Ejercicio5</module>
+        <module>Ejercicio6</module>
+
     </modules>
     <dependencies>
         <dependency>
