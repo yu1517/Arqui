@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+
+    <persistence-unit name="Ejemplo" transaction-type="RESOURCE_LOCAL">
+
+        <!-- Proveedor de la implementación de JPA (por ejemplo, Hibernate) -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Clases de entidades gestionadas -->
+        <class>org.example.Persona</class>
+        <class>org.example.Direccion</class>
+
+        <!-- Configuración de la base de datos -->
+        <properties>
+            <!-- Configuración de la conexión a la base de datos -->
+            <!--Driver-->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+            <!--URI-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dbArqui" />
+            <!--Usuario-->
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <!--Contraseña-->
+            <property name="javax.persistence.jdbc.password" value="" />
+
+            <!-- Propiedades específicas de Hibernate -->
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+        </properties>
+
+    </persistence-unit>
+</persistence>
